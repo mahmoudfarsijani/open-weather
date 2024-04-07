@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper w-full h-screen bg-ulight-sky pt-[150px] relative">
-    <Container class="relative z-0">
+    <Container class="relative z-0" :is-curve="true">
       <Row :is-between="true">
         <Column class="flex items-center justify-center">
           <form class=" w-full flex flex-col gap-[20px] bg-lime-500">

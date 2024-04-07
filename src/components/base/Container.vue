@@ -1,18 +1,23 @@
 <template>
     <div>
-        <component :is="tag" class="container">
+        <component :is="tag" :class="['container',elementClasses]">
             <slot/>
         </component>
     </div>
 </template>
 
 <script setup>
-    import { defineProps } from 'vue';
-    import { string } from 'vue-types';
+    import { computed, defineProps } from 'vue';
+    import { bool, string } from 'vue-types';
 
-    defineProps({
-        tag:string().def('div')
-    })
+    const props = defineProps({
+        tag:string().def('div'),
+        isCurve:bool().def(false)
+    });
+
+    const elementClasses = computed(() => ({
+        'is-curve': props?.isCurve
+    }))
 </script>
 
 
@@ -25,6 +30,7 @@
         margin-inline: auto;
         margin: auto ;
         background: rgba(0, 0, 0, 0.2);
+        overflow: hidden;
 
     }
 
@@ -44,5 +50,9 @@
         .container {
             --max-width:1200px;
         }
+    }
+
+    .container.is-curve {
+        @apply rounded-lg
     }
 </style>
