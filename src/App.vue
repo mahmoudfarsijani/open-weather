@@ -5,7 +5,7 @@
         <Column class="flex items-center justify-center">
           <form class=" w-full flex flex-col gap-[20px] bg-lime-500">
             <Input placeholder="Type City..." id="searchCity" :is-pill="true"/>
-            <Button :is-icon-only="false" icon="search" :is-full="true" :is-light="true" :is-pill="true">
+            <Button :is-icon-only="false" icon="search" :is-full="true" :is-light="true" :is-pill="true" class="text-white text-[17px]">
               Search
             </Button>
           </form>
