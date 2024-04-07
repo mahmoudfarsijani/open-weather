@@ -3,8 +3,11 @@
     <Container>
       <Row :is-between="true">
         <Column>
-          <form>
+          <form class="flex flex-col gap-[20px]">
             <Input placeholder="Type City..." id="searchCity" :is-pill="true"/>
+            <Button :is-icon-only="false" icon="search" :is-full="true" :is-dark="true" :is-pill="true">
+              Search
+            </Button>
           </form>
         </Column>
 
