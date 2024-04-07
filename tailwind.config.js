@@ -11,7 +11,8 @@ export default {
         'light-sky':'#ACDDFF',
         'elephent':'#506C80',
         'oil':'#274255',
-        'dark-oil':'#0F2433'
+        'dark-oil':'#0F2433',
+        'ulight-sky':'#84B8F0'
       },
       width : {
         '25':'25%',

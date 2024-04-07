@@ -1,6 +1,6 @@
 <template>
-  <div class="wrapper w-full h-screen bg-dark-oil pt-[150px]">
-    <Container>
+  <div class="wrapper w-full h-screen bg-ulight-sky pt-[150px] relative">
+    <Container class="relative z-0">
       <Row :is-between="true">
         <Column class="flex items-center justify-center">
           <form class=" w-full flex flex-col gap-[20px] bg-lime-500">
@@ -26,3 +26,16 @@
   import Column from '@/components/base/Column.vue'
   import Input from '@/components/base/Input.vue'
 </script>
+
+
+<style scoped>
+  .wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 500px;
+    background: #879CAA;
+  }
+</style>
