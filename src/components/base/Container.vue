@@ -24,7 +24,7 @@
         max-width: var(--max-width);
         margin-inline: auto;
         margin: auto ;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.2);
 
     }
 

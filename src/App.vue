@@ -1,11 +1,11 @@
 <template>
-  <div class="wrapper w-full h-screen bg-elephent pt-[150px]">
+  <div class="wrapper w-full h-screen bg-dark-oil pt-[150px]">
     <Container>
       <Row :is-between="true">
-        <Column>
-          <form class="flex flex-col gap-[20px]">
+        <Column class="flex items-center justify-center">
+          <form class=" w-full flex flex-col gap-[20px] bg-lime-500">
             <Input placeholder="Type City..." id="searchCity" :is-pill="true"/>
-            <Button :is-icon-only="false" icon="search" :is-full="true" :is-dark="true" :is-pill="true">
+            <Button :is-icon-only="false" icon="search" :is-full="true" :is-light="true" :is-pill="true">
               Search
             </Button>
           </form>
