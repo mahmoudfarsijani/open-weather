@@ -12,11 +12,13 @@
 
     const props = defineProps({
         tag:string().def('div'),
-        isCurve:bool().def(false)
+        isCurve:bool().def(false),
+        isShadowInner:bool().def(false)
     });
 
     const elementClasses = computed(() => ({
-        'is-curve': props?.isCurve
+        'is-curve': props?.isCurve,
+        'is-shadow-inner': props?.isShadowInner
     }))
 </script>
 
@@ -54,5 +56,9 @@
 
     .container.is-curve {
         @apply rounded-lg
+    }
+
+    .container.is-shadow-inner {
+        @apply shadow-gray-600 shadow-inner
     }
 </style>

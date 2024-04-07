@@ -18,6 +18,6 @@
 
 <style scoped>
     .column {
-        @apply w-45 h-[490px] bg-purple-400
+        @apply w-45 h-[490px] 
     }
 </style>
