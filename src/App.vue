@@ -10,9 +10,11 @@
             </Button>
             {{ inputValue }}
           </form>
+          
         </Column>
 
         <Column>
+          <CardWeather/>
         </Column>
       </Row>
     </Container>
@@ -30,6 +32,7 @@
   import Button from '@/components/base/Button.vue'
   import Column from '@/components/base/Column.vue'
   import Input from '@/components/base/Input.vue'
+  import CardWeather from '@/components/main/CardWeather.vue'
 
 
   const inputValue = ref('');

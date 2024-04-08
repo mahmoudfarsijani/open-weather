@@ -20,6 +20,14 @@ export default {
         '50':'50%',
         '75':'75%',
         '100':'100%'
+      },
+      fontFamily: {
+        'roboto':['Roboto','sans-serif']
+      },
+      fontWeight : {
+        thin : '300',
+        medium : '500',
+        ubold : '900'
       }
     },
   },
