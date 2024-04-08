@@ -1,5 +1,5 @@
 <template>
-  <Card v-if="data"  class="bg-purple-600 px-[5px]">
+  <Card v-if="data"  class="px-[5px]">
     <template #header>
       <div>
         <h1
@@ -19,7 +19,7 @@
       </div>
     </template>
     <div>
-      <div class="flex flex-nowrap gap-[10px] items-center bg-purple-400 mt-[10px] justify-between">
+      <div class="flex flex-nowrap gap-[10px] items-center mt-[10px] justify-between">
         <h3 class="day font-roboto text-black font-normal uppercase text-[20px]">{{ day }}</h3>
         <span class="inline-block text-[17px]">
             {{ month }}

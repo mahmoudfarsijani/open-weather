@@ -1,9 +1,9 @@
 <template>
   <div class="wrapper w-full h-screen bg-ulight-sky pt-[150px] relative">
     <Container class="relative z-0" :is-curve="true" :is-shadow-inner="true">
-      <Row :is-between="true">
+      <Row :is-between="true" class="px-[10px]">
         <Column class="flex items-center justify-center">
-          <form @submit.prevent="submit(inputValue)" class=" w-full flex flex-col gap-[20px] bg-lime-500">
+          <form @submit.prevent="submit(inputValue)" class=" w-full flex flex-col gap-[20px]">
             <Input v-model="inputValue" type="text" placeholder="Type City..." id="searchCity" :is-pill="true"/>
             <Button tag="button" type="submit" :is-icon-only="false" icon="search" :is-full="true" :is-light="true" :is-pill="true" class="text-white text-[17px]">
               Search
