@@ -26,7 +26,8 @@
         </span>
       </div>
       <p class="temp text-black flex flex-nowrap items-center text-[20px] gap-[5px]">
-        21c
+        {{ temp }} 
+        <span v-html="symbolC"></span>
         <Icon
           tag="span"
           icon="temp"
@@ -112,6 +113,18 @@ const monthNames = ["January","February","March","April","May","June","July",
             "August","September","October","November","December"];
 const month = computed(() => {
     return monthNames[dates.getMonth()]
+})
+
+const symbolC = computed(() => {
+    const symbol = '&deg;C'
+    return `<span>${symbol}</span>`
+})
+
+const temp = computed(() => {
+    const tempNum = props.data?.main?.temp;
+    const convertTemp = tempNum - 273;
+    const finalTemp = Math.ceil(convertTemp)
+    return finalTemp
 })
 
 </script>
