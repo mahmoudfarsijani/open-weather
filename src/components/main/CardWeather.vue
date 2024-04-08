@@ -35,9 +35,9 @@
           class="inline-block"
         />
       </p>
-      <div class="pt-[10px]">
-        <span> MAX 27 </span>
-        <span> MIN 15 </span>
+      <div class="pt-[10px] flex flex-nowrap gap-[10px]">
+        <span> MAX {{ maxTemp }}<span v-html="symbolC"></span></span> 
+        <span> MIN {{ minTemp }}<span v-html="symbolC"></span></span>
       </div>
     </div>
 
@@ -122,6 +122,20 @@ const symbolC = computed(() => {
 
 const temp = computed(() => {
     const tempNum = props.data?.main?.temp;
+    const convertTemp = tempNum - 273;
+    const finalTemp = Math.ceil(convertTemp)
+    return finalTemp
+})
+
+const maxTemp = computed(() => {
+    const tempNum = props.data?.main?.temp_max;
+    const convertTemp = tempNum - 273;
+    const finalTemp = Math.ceil(convertTemp)
+    return finalTemp
+})
+
+const minTemp = computed(() => {
+    const tempNum = props.data?.main?.temp_min;
     const convertTemp = tempNum - 273;
     const finalTemp = Math.ceil(convertTemp)
     return finalTemp
