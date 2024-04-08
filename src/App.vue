@@ -8,13 +8,12 @@
             <Button tag="button" type="submit" :is-icon-only="false" icon="search" :is-full="true" :is-light="true" :is-pill="true" class="text-white text-[17px]">
               Search
             </Button>
-            {{ inputValue }}
           </form>
           
         </Column>
 
         <Column>
-          <CardWeather/>
+          <CardWeather :data="datas"/>
         </Column>
       </Row>
     </Container>
@@ -49,8 +48,9 @@
   }
 
   const submit = (i) => {
+    inputValue.value = '';
     console.log('submit');
-    getData(i)
+    getData(i);
   }
 
 
