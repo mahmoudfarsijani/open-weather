@@ -49,7 +49,7 @@
         </div>
         <div class="flex flex-col flex-nowrap items-center">
           <Icon tag="span" :is-icon-only="true" icon="humidity" />
-          <span class="text-center text-black"> 49% </span>
+          <span class="text-center text-black"> {{ humidity }} </span>
         </div>
       </div>
     </template>
@@ -143,6 +143,10 @@ const minTemp = computed(() => {
 
 const wind = computed(() => {
     return `${Math.ceil(props.data?.wind?.speed)} KM/H`
+})
+
+const humidity = computed(() => {
+    return `${props.data?.main?.humidity}%`
 })
 
 </script>
