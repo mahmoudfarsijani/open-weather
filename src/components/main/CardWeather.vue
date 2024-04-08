@@ -45,7 +45,7 @@
       <div class="flex flex-nowrap items-center gap-[20px] pt-[30px]">
         <div class="flex flex-col flex-nowrap items-center">
           <Icon tag="span" :is-icon-only="true" icon="wind" />
-          <span class="text-center text-black"> 12 </span>
+          <span class="text-center text-black"> {{ wind }} </span>
         </div>
         <div class="flex flex-col flex-nowrap items-center">
           <Icon tag="span" :is-icon-only="true" icon="humidity" />
@@ -139,6 +139,10 @@ const minTemp = computed(() => {
     const convertTemp = tempNum - 273;
     const finalTemp = Math.ceil(convertTemp)
     return finalTemp
+})
+
+const wind = computed(() => {
+    return `${Math.ceil(props.data?.wind?.speed)} KM/H`
 })
 
 </script>
