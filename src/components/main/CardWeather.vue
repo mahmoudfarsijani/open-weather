@@ -13,6 +13,7 @@
           />
           {{ data?.name }}
         </h1>
+        <img :src="convertImg"/>
         <h2 class="capitalize text-black font-roboto font-medium text-[45px] mt-[5px]">
             {{ weather}}
         </h2>
@@ -153,5 +154,9 @@ const currentDay =  computed(() => {
   return dates.getDate()
 })
 
+const convertImg = computed(() => {
+  const idImg = props.data?.weather[0]?.icon
+  return `https://openweathermap.org/img/wn/${idImg}.png`
+})
 
 </script>
