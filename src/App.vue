@@ -77,7 +77,7 @@ const submit = (i) => {
   top: 0;
   z-index: 0;
   width: 100%;
-  height: 500px;
-  background: #879caa;
+  height: 550px;
+  background: #506C80;
 }
 </style>

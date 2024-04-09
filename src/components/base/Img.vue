@@ -1,14 +1,15 @@
 <template>
-    <img :src="src" :alt="alt">
+    <img :src="src" :alt="alt" :height="height">
 </template>
 
 
 <script setup>
     import { defineProps } from 'vue';
-    import { string } from 'vue-types';
+    import { number, oneOfType, string } from 'vue-types';
 
     defineProps({
         src:string(),
-        alt:string()
+        alt:string(),
+        height:oneOfType([number(),string().validate(v => !isNaN(+v))])
     })
 </script>
