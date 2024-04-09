@@ -22,7 +22,7 @@
       <div class="flex flex-nowrap gap-[10px] items-center mt-[10px] justify-between">
         <h3 class="day font-roboto text-black font-normal uppercase text-[20px]">{{ day }}</h3>
         <span class="inline-block text-[17px]">
-            {{ month }}
+          {{ currentDay }}  {{ month }}
         </span>
       </div>
       <p class="temp text-black flex flex-nowrap items-center text-[20px] gap-[5px]">
@@ -148,5 +148,10 @@ const wind = computed(() => {
 const humidity = computed(() => {
     return `${props.data?.main?.humidity}%`
 })
+
+const currentDay =  computed(() => {
+  return dates.getDate()
+})
+
 
 </script>
